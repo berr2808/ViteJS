@@ -1,5 +1,5 @@
 import { createUser } from "@/redux/slices/user.slice";
-import React from "react";
+
 import { useDispatch } from "react-redux";
 
 const Home = () => {

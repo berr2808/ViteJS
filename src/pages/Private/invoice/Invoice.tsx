@@ -12,6 +12,7 @@ const Invoice = () => {
 const InvoiceContainer = styled.div`
   color: #000;
   background: #fff;
+  padding: 5px;
 `;
 
 export default Invoice;
