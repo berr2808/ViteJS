@@ -1,22 +1,31 @@
-import { Typography } from "@mui/material";
+import { Customer, customerDefaultState } from "@/models";
 import { FC } from "react";
 import styled from "styled-components";
 
-interface IProps {}
+interface IProps {
+  customer: Customer;
+}
 
 const HeaderInvoice: FC<IProps> = (props) => {
+  const { customer } = props;
   return (
     <Header>
-      <Typography variant="h4">RECEIPT OF PAYMENT</Typography>
-      <Typography variant="subtitle1">Byron Eliezer Rocha Rodriguez</Typography>
-      <Typography variant="body2">489-280897-0000Q</Typography>
-      <Typography variant="body2">Managua</Typography>
-      <Typography variant="body2">Nicaragua</Typography>
+      <p className="mb-2 text-4xl font-semibold">RECEIPT OF PAYMENT</p>
+      <p className="font-semibold text-lg">{customer.name}</p>
+      <p>{customer.identification}</p>
+      <p>{customer.location.state}</p>
+      <p>{customer.location.country}</p>
+      <p className="mt-2">Mobile: {customer.mobile}</p>
     </Header>
   );
 };
 
+HeaderInvoice.defaultProps = {
+  customer: customerDefaultState,
+};
+
 const Header = styled.div`
+  width: 100%;
   text-align: right;
 `;
 

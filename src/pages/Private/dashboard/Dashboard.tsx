@@ -1,5 +1,7 @@
+import { Layout } from "@/layout";
+
 const Dashboard = () => {
-  return <>DashBoard</>;
+  return <div>{}</div>;
 };
 
 export default Dashboard;

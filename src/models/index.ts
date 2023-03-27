@@ -1,3 +1,4 @@
+export * from "./customer.type";
 export * from "./invoice.type";
 export * from "./roles";
 export * from "./routes";

@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <Suspense fallback={<h2>Cargando...</h2>}>
+        <Logout />
         <BrowserRouter>
-          <Logout />
           <RoutesWithNotFound>
             <Route path="/" element={<Navigate to={PrivateRoutes.PRIVATE} />} />
             <Route path={PublicRoutes.LOGIN} element={<Login />} />

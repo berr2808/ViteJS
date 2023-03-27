@@ -7,13 +7,13 @@ import { useDispatch } from "react-redux";
 import { resetUser } from "@/redux/slices/user.slice";
 
 const Logout = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const logout = () => {
     clearPersistLocalStorage(UserKey);
     dispatch(resetUser);
-    navigate(`/${PublicRoutes.LOGIN}`, { replace: true });
+    // navigate(`/${PublicRoutes.LOGIN}`, { replace: true });
   };
 
   return (
